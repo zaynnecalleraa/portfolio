@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaynne | Portfólio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Inter:wght@400;500;700&family=Poppins:wght@400;500;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cursor" id="cursor">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round">
+                <line x1="20" y1="20" x2="20" y2="2"/>
+                <line x1="20" y1="20" x2="35" y2="8"/>
+                <line x1="20" y1="20" x2="38" y2="20"/>
+                <line x1="20" y1="20" x2="35" y2="32"/>
+                <line x1="20" y1="20" x2="20" y2="38"/>
+                <line x1="20" y1="20" x2="5" y2="32"/>
+                <line x1="20" y1="20" x2="2" y2="20"/>
+                <line x1="20" y1="20" x2="5" y2="8"/>
+                <path d="M 20 10 Q 27 13 30 20 Q 27 27 20 30 Q 13 27 10 20 Q 13 13 20 10 Z"/>
+                <path d="M 20 5 Q 32 9 35 20 Q 32 31 20 35 Q 8 31 5 20 Q 8 9 20 5 Z"/>
+            </g>
+        </svg>
+    </div>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#inicio" class="nav-link active" data-page="inicio">Inicio</a></li>
+            <li><a href="#projetos" class="nav-link" data-page="projetos">Projetos</a></li>
+            <li><a href="#sobre" class="nav-link" data-page="sobre">Sobre Mim</a></li>
+            <li><a href="#habilidades" class="nav-link" data-page="habilidades">Habilidades</a></li>
+            <li><a href="#contato" class="nav-link" data-page="contato">Contato</a></li>
+            <li>
+                <button class="nav-link music-toggle" id="music-toggle" aria-label="Controlar música">
+                    <svg class="music-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                        <path class="sound-waves" d="M15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/>
+                        <line class="mute-line" x1="23" y1="9" x2="17" y2="15" style="display:none"/>
+                        <line class="mute-line" x1="17" y1="9" x2="23" y2="15" style="display:none"/>
+                    </svg>
+                    <span class="music-label">SOM</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-image">
+            <img src="assets/zaynne-character.png" alt="Personagem Zaynne" />
+        </div>
+
+        <div class="hero-content">
+
+            <div class="title-glitch">
+                <img src="assets/zaynne-titulo.png" alt="Zaynne" class="title-img title-img-base">
+                <img src="assets/zaynne-titulo.png" alt="" class="title-img title-img-red" aria-hidden="true">
+                <img src="assets/zaynne-titulo.png" alt="" class="title-img title-img-blue" aria-hidden="true">
+            </div>
+
+            <p class="hero-subtitle">DESENVOLVEDORA FRONT-END & DESIGNER</p>
+
+            <p class="hero-description">
+                Transformo ideias em experiências digitais criativas, funcionais e memoráveis.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projetos" class="btn btn-primary" data-target="projetos">VER PROJETOS</a>
+                <a href="#sobre" class="btn btn-secondary" data-target="sobre">SOBRE MIM</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+
+        <div class="projetos-titulo title-glitch">
+            <img src="assets/titulo-projetos.png" alt="Meus Projetos" class="title-img title-img-base titulo-img">
+            <img src="assets/titulo-projetos.png" alt="" class="title-img title-img-red titulo-img" aria-hidden="true">
+            <img src="assets/titulo-projetos.png" alt="" class="title-img title-img-blue titulo-img" aria-hidden="true">
+        </div>
+
+        <div class="projetos-grid">
+
+            <article class="projeto-card">
+                <img src="assets/projeto-1.png" alt="Projeto Callera Laser" class="card-imagem">
+                <a href="https://github.com/zaynnecalleraa/callera-laser.git"
+                   target="_blank" rel="noopener"
+                   class="btn btn-primary btn-projeto">
+                    VER PROJETO
+                </a>
+            </article>
+
+            <article class="projeto-card projeto-card--confidencial">
+                <img src="assets/projeto-2.png" alt="Projeto Safe Haven" class="card-imagem">
+                <div class="projeto-confidencial" id="overlay-safehaven">
+                    <span class="confidencial-tag">PROJETO CONFIDENCIAL</span>
+                    <p class="confidencial-texto">Este projeto não pode ser exposto publicamente. Quer saber mais?</p>
+                    <a href="#contato" class="btn btn-primary btn-confidencial-contato">ENTRAR EM CONTATO</a>
+                </div>
+                <button class="btn btn-primary btn-projeto btn-confidencial-trigger">VER PROJETO</button>
+            </article>
+
+            <article class="projeto-card">
+                <img src="assets/projeto-3.png" alt="Projeto Jogo da Honda" class="card-imagem">
+                <a href="https://github.com/zaynnecalleraa/jogo-da-memoria-honda.git"
+                   target="_blank" rel="noopener"
+                   class="btn btn-primary btn-projeto">
+                    VER PROJETO
+                </a>
+            </article>
+
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <div class="sobre-inner">
+
+            <div class="sobre-left">
+                <div class="sobre-titulo-wrap title-glitch">
+                    <img src="assets/titulo-sobre.png" alt="Minha História" class="title-img title-img-base sobre-titulo-img">
+                    <img src="assets/titulo-sobre.png" alt="" class="title-img title-img-red sobre-titulo-img" aria-hidden="true">
+                    <img src="assets/titulo-sobre.png" alt="" class="title-img title-img-blue sobre-titulo-img" aria-hidden="true">
+                </div>
+
+                <div class="sobre-texto">
+                    <p>Sou uma desenvolvedora front-end apaixonada por criar interfaces modernas, intuitivas e que realmente fazem sentido para as pessoas.</p>
+                    <p>Acredito que design e código devem caminhar juntos para criar experiências únicas.</p>
+                    <p>Além da tecnologia, sou apaixonada por música, arte, filmes e tudo que envolve criatividade.</p>
+                </div>
+            </div>
+
+            <div class="sobre-right">
+                <img src="assets/polaroid-sobre.png" alt="Polaroid earth-65" class="sobre-polaroid-img">
+            </div>
+        </div>
+
+        <div class="sobre-cards">
+            <div class="sobre-card">
+                <img src="assets/icon-codigo.svg" alt="" class="sobre-card-icon" aria-hidden="true">
+                <h3 class="sobre-card-title">Código</h3>
+                <p class="sobre-card-desc">Transformo ideias em interface.</p>
+            </div>
+            <div class="sobre-card">
+                <img src="assets/icon-design.svg" alt="" class="sobre-card-icon" aria-hidden="true">
+                <h3 class="sobre-card-title">Design</h3>
+                <p class="sobre-card-desc">Crio com propósito e intenção.</p>
+            </div>
+            <div class="sobre-card">
+                <img src="assets/icon-criatividade.svg" alt="" class="sobre-card-icon" aria-hidden="true">
+                <h3 class="sobre-card-title">Criatividade</h3>
+                <p class="sobre-card-desc">Gosto de pensar fora da caixa.</p>
+            </div>
+            <div class="sobre-card">
+                <img src="assets/icon-paixao.svg" alt="" class="sobre-card-icon" aria-hidden="true">
+                <h3 class="sobre-card-title">Paixão</h3>
+                <p class="sobre-card-desc">Amo o que faço e como faço.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades" class="habilidades">
+
+        <div class="habilidades-titulo-wrap title-glitch">
+            <img src="assets/titulo-habilidades.png" alt="Habilidades" class="title-img title-img-base habilidades-titulo-img">
+            <img src="assets/titulo-habilidades.png" alt="" class="title-img title-img-red habilidades-titulo-img" aria-hidden="true">
+            <img src="assets/titulo-habilidades.png" alt="" class="title-img title-img-blue habilidades-titulo-img" aria-hidden="true">
+        </div>
+
+        <ul class="habilidades-lista" id="habilidades-lista">
+
+            <li class="skill-row">
+                <div class="skill-bar-col">
+                    <span class="skill-pct">95%</span>
+                    <div class="skill-track">
+                        <div class="skill-fill" data-pct="95"></div>
+                    </div>
+                </div>
+                <div class="skill-label-col">
+                    <img src="assets/icon-html.png" alt="HTML5" class="skill-icon">
+                    <span class="skill-nome">HTML</span>
+                </div>
+            </li>
+
+            <li class="skill-row">
+                <div class="skill-bar-col">
+                    <span class="skill-pct">90%</span>
+                    <div class="skill-track">
+                        <div class="skill-fill" data-pct="90"></div>
+                    </div>
+                </div>
+                <div class="skill-label-col">
+                    <img src="assets/icon-css.png" alt="CSS3" class="skill-icon">
+                    <span class="skill-nome">CSS</span>
+                </div>
+            </li>
+
+            <li class="skill-row">
+                <div class="skill-bar-col">
+                    <span class="skill-pct">80%</span>
+                    <div class="skill-track">
+                        <div class="skill-fill" data-pct="80"></div>
+                    </div>
+                </div>
+                <div class="skill-label-col">
+                    <img src="assets/icon-js.png" alt="JavaScript" class="skill-icon">
+                    <span class="skill-nome">JavaScript</span>
+                </div>
+            </li>
+
+            <li class="skill-row">
+                <div class="skill-bar-col">
+                    <span class="skill-pct">85%</span>
+                    <div class="skill-track">
+                        <div class="skill-fill" data-pct="85"></div>
+                    </div>
+                </div>
+                <div class="skill-label-col">
+                    <img src="assets/icon-figma.png" alt="Figma" class="skill-icon">
+                    <span class="skill-nome">Figma</span>
+                </div>
+            </li>
+
+            <li class="skill-row">
+                <div class="skill-bar-col">
+                    <span class="skill-pct">90%</span>
+                    <div class="skill-track">
+                        <div class="skill-fill" data-pct="90"></div>
+                    </div>
+                </div>
+                <div class="skill-label-col">
+                    <img src="assets/icon-uiux.png" alt="UI/UX Design" class="skill-icon">
+                    <span class="skill-nome">UI/UX Design</span>
+                </div>
+            </li>
+
+        </ul>
+    </section>
+
+    <section id="contato" class="contato">
+
+        <div class="contato-left">
+            <div class="contato-titulo-wrap title-glitch">
+                <img src="assets/contato-titulo.png" alt="Vamos Criar Algo Juntos?" class="title-img title-img-base contato-titulo-img">
+                <img src="assets/contato-titulo.png" alt="" class="title-img title-img-red contato-titulo-img" aria-hidden="true">
+                <img src="assets/contato-titulo.png" alt="" class="title-img title-img-blue contato-titulo-img" aria-hidden="true">
+            </div>
+        </div>
+
+        <div class="contato-right">
+            <div class="card-wrap">
+
+                <div class="card-tape"></div>
+
+                <div class="card-paper">
+                    <form class="form-card" novalidate>
+
+                        <div class="campo">
+                            <label class="campo-label" for="f-nome">NOME</label>
+                            <input id="f-nome" type="text" class="campo-input" autocomplete="name">
+                        </div>
+
+                        <div class="campo">
+                            <label class="campo-label" for="f-email">E-MAIL</label>
+                            <input id="f-email" type="email" class="campo-input" autocomplete="email">
+                        </div>
+
+                        <div class="campo">
+                            <label class="campo-label" for="f-msg">MENSAGEM</label>
+                            <textarea id="f-msg" class="campo-input campo-textarea"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-enviar">
+                            ENVIAR MENSAGEM
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7Z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <audio id="bg-music" loop preload="auto">
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
