@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaynne | Portfólio</title>
+    <title>Zaynne | PortfÃ³lio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +38,7 @@
             <li><a href="#habilidades" class="nav-link" data-page="habilidades">Habilidades</a></li>
             <li><a href="#contato" class="nav-link" data-page="contato">Contato</a></li>
             <li>
-                <button class="nav-link music-toggle" id="music-toggle" aria-label="Controlar música">
+                <button class="nav-link music-toggle" id="music-toggle" aria-label="Controlar mÃºsica">
                     <svg class="music-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
                         <path class="sound-waves" d="M15.54 8.46a5 5 0 0 1 0 7.07M19.07 4.93a10 10 0 0 1 0 14.14"/>
@@ -54,21 +54,21 @@
     <section id="inicio" class="hero">
 
         <div class="hero-image">
-            <img src="assets/zaynne-character.png" alt="Personagem Zaynne" />
+            <img src="assets/images/zaynne-character.png" alt="Personagem Zaynne" />
         </div>
 
         <div class="hero-content">
 
             <div class="title-glitch">
-                <img src="assets/zaynne-titulo.png" alt="Zaynne" class="title-img title-img-base">
-                <img src="assets/zaynne-titulo.png" alt="" class="title-img title-img-red" aria-hidden="true">
-                <img src="assets/zaynne-titulo.png" alt="" class="title-img title-img-blue" aria-hidden="true">
+                <img src="assets/images/zaynne-titulo.png" alt="Zaynne" class="title-img title-img-base">
+                <img src="assets/images/zaynne-titulo.png" alt="" class="title-img title-img-red" aria-hidden="true">
+                <img src="assets/images/zaynne-titulo.png" alt="" class="title-img title-img-blue" aria-hidden="true">
             </div>
 
             <p class="hero-subtitle">DESENVOLVEDORA FRONT-END & DESIGNER</p>
 
             <p class="hero-description">
-                Transformo ideias em experiências digitais criativas, funcionais e memoráveis.
+                Transformo ideias em experiÃªncias digitais criativas, funcionais e memorÃ¡veis.
             </p>
 
             <div class="hero-buttons">
@@ -81,15 +81,23 @@
     <section id="projetos" class="projetos">
 
         <div class="projetos-titulo title-glitch">
-            <img src="assets/titulo-projetos.png" alt="Meus Projetos" class="title-img title-img-base titulo-img">
-            <img src="assets/titulo-projetos.png" alt="" class="title-img title-img-red titulo-img" aria-hidden="true">
-            <img src="assets/titulo-projetos.png" alt="" class="title-img title-img-blue titulo-img" aria-hidden="true">
+            <img src="assets/images/titulo-projetos.png" alt="Meus Projetos" class="title-img title-img-base titulo-img">
+            <img src="assets/images/titulo-projetos.png" alt="" class="title-img title-img-red titulo-img" aria-hidden="true">
+            <img src="assets/images/titulo-projetos.png" alt="" class="title-img title-img-blue titulo-img" aria-hidden="true">
         </div>
+
+        <div class="projetos-slider">
+
+        <button class="slider-arrow slider-arrow--prev" aria-label="Cards anteriores">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"/>
+            </svg>
+        </button>
 
         <div class="projetos-grid">
 
             <article class="projeto-card">
-                <img src="assets/projeto-1.png" alt="Projeto Callera Laser" class="card-imagem">
+                <img src="assets/projects/projeto-1.png" alt="Projeto Callera Laser" class="card-imagem">
                 <a href="https://github.com/zaynnecalleraa/callera-laser.git"
                    target="_blank" rel="noopener"
                    class="btn btn-primary btn-projeto">
@@ -97,24 +105,48 @@
                 </a>
             </article>
 
-            <article class="projeto-card projeto-card--confidencial">
-                <img src="assets/projeto-2.png" alt="Projeto Safe Haven" class="card-imagem">
-                <div class="projeto-confidencial" id="overlay-safehaven">
-                    <span class="confidencial-tag">PROJETO CONFIDENCIAL</span>
-                    <p class="confidencial-texto">Este projeto não pode ser exposto publicamente. Quer saber mais?</p>
-                    <a href="#contato" class="btn btn-primary btn-confidencial-contato">ENTRAR EM CONTATO</a>
+            <article class="projeto-card">
+                <img src="assets/projects/projeto-2.png" alt="Projeto Safe Haven" class="card-imagem">
+                <div class="projeto-confidencial">
+                    <span class="confidencial-tag">SEM REPOSITÓRIO PÚBLICO</span>
+                    <p class="confidencial-texto">Quer conhecer o projeto? Assista ao sistema ou entre em contato.</p>
+                    <div class="overlay-acoes">
+                        <a href="https://drive.google.com/drive/folders/1Ls9ki66Z5Z-KOHjmzDudeg_7vv8ddOVY?usp=sharing" target="_blank" rel="noopener" class="btn btn-secondary btn-overlay">VER SISTEMA</a>
+                        <a href="#contato" class="btn btn-primary btn-overlay btn-overlay-contato">ENTRAR EM CONTATO</a>
+                    </div>
                 </div>
-                <button class="btn btn-primary btn-projeto btn-confidencial-trigger">VER PROJETO</button>
+                <button class="btn btn-primary btn-projeto btn-overlay-trigger">VER PROJETO</button>
             </article>
 
             <article class="projeto-card">
-                <img src="assets/projeto-3.png" alt="Projeto Jogo da Honda" class="card-imagem">
+                <img src="assets/projects/projeto-3.png" alt="Projeto Jogo da Honda" class="card-imagem">
                 <a href="https://github.com/zaynnecalleraa/jogo-da-memoria-honda.git"
                    target="_blank" rel="noopener"
                    class="btn btn-primary btn-projeto">
                     VER PROJETO
                 </a>
             </article>
+
+            <article class="projeto-card">
+                <img src="assets/projects/projeto-4.png" alt="Projeto 4" class="card-imagem">
+                <div class="projeto-confidencial">
+                    <span class="confidencial-tag">SEM REPOSITÓRIO PÚBLICO</span>
+                    <p class="confidencial-texto">Quer conhecer o projeto? Assista ao sistema ou entre em contato.</p>
+                    <div class="overlay-acoes">
+                        <a href="https://drive.google.com/drive/folders/1YZgtlaDMfb70sULLPBm9mB2Wyo-4Nv02?usp=drive_link" target="_blank" rel="noopener" class="btn btn-secondary btn-overlay">VER SISTEMA</a>
+                        <a href="#contato" class="btn btn-primary btn-overlay btn-overlay-contato">ENTRAR EM CONTATO</a>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-projeto btn-overlay-trigger">VER PROJETO</button>
+            </article>
+
+        </div>
+
+        <button class="slider-arrow slider-arrow--next" aria-label="Próximos cards">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"/>
+            </svg>
+        </button>
 
         </div>
     </section>
@@ -124,43 +156,43 @@
 
             <div class="sobre-left">
                 <div class="sobre-titulo-wrap title-glitch">
-                    <img src="assets/titulo-sobre.png" alt="Minha História" class="title-img title-img-base sobre-titulo-img">
-                    <img src="assets/titulo-sobre.png" alt="" class="title-img title-img-red sobre-titulo-img" aria-hidden="true">
-                    <img src="assets/titulo-sobre.png" alt="" class="title-img title-img-blue sobre-titulo-img" aria-hidden="true">
+                    <img src="assets/images/titulo-sobre.png" alt="Minha HistÃ³ria" class="title-img title-img-base sobre-titulo-img">
+                    <img src="assets/images/titulo-sobre.png" alt="" class="title-img title-img-red sobre-titulo-img" aria-hidden="true">
+                    <img src="assets/images/titulo-sobre.png" alt="" class="title-img title-img-blue sobre-titulo-img" aria-hidden="true">
                 </div>
 
                 <div class="sobre-texto">
                     <p>Sou uma desenvolvedora front-end apaixonada por criar interfaces modernas, intuitivas e que realmente fazem sentido para as pessoas.</p>
-                    <p>Acredito que design e código devem caminhar juntos para criar experiências únicas.</p>
-                    <p>Além da tecnologia, sou apaixonada por música, arte, filmes e tudo que envolve criatividade.</p>
+                    <p>Acredito que design e cÃ³digo devem caminhar juntos para criar experiÃªncias Ãºnicas.</p>
+                    <p>AlÃ©m da tecnologia, sou apaixonada por mÃºsica, arte, filmes e tudo que envolve criatividade.</p>
                 </div>
             </div>
 
             <div class="sobre-right">
-                <img src="assets/polaroid-sobre.png" alt="Polaroid earth-65" class="sobre-polaroid-img">
+                <img src="assets/images/polaroid-sobre.png" alt="Polaroid earth-65" class="sobre-polaroid-img">
             </div>
         </div>
 
         <div class="sobre-cards">
             <div class="sobre-card">
-                <img src="assets/icon-codigo.svg" alt="" class="sobre-card-icon" aria-hidden="true">
-                <h3 class="sobre-card-title">Código</h3>
+                <img src="assets/icons/icon-codigo.svg" alt="" class="sobre-card-icon" aria-hidden="true">
+                <h3 class="sobre-card-title">CÃ³digo</h3>
                 <p class="sobre-card-desc">Transformo ideias em interface.</p>
             </div>
             <div class="sobre-card">
-                <img src="assets/icon-design.svg" alt="" class="sobre-card-icon" aria-hidden="true">
+                <img src="assets/icons/icon-design.svg" alt="" class="sobre-card-icon" aria-hidden="true">
                 <h3 class="sobre-card-title">Design</h3>
-                <p class="sobre-card-desc">Crio com propósito e intenção.</p>
+                <p class="sobre-card-desc">Crio com propÃ³sito e intenÃ§Ã£o.</p>
             </div>
             <div class="sobre-card">
-                <img src="assets/icon-criatividade.svg" alt="" class="sobre-card-icon" aria-hidden="true">
+                <img src="assets/icons/icon-criatividade.svg" alt="" class="sobre-card-icon" aria-hidden="true">
                 <h3 class="sobre-card-title">Criatividade</h3>
                 <p class="sobre-card-desc">Gosto de pensar fora da caixa.</p>
             </div>
             <div class="sobre-card">
-                <img src="assets/icon-paixao.svg" alt="" class="sobre-card-icon" aria-hidden="true">
-                <h3 class="sobre-card-title">Paixão</h3>
-                <p class="sobre-card-desc">Amo o que faço e como faço.</p>
+                <img src="assets/icons/icon-paixao.svg" alt="" class="sobre-card-icon" aria-hidden="true">
+                <h3 class="sobre-card-title">PaixÃ£o</h3>
+                <p class="sobre-card-desc">Amo o que faÃ§o e como faÃ§o.</p>
             </div>
         </div>
     </section>
@@ -168,9 +200,9 @@
     <section id="habilidades" class="habilidades">
 
         <div class="habilidades-titulo-wrap title-glitch">
-            <img src="assets/titulo-habilidades.png" alt="Habilidades" class="title-img title-img-base habilidades-titulo-img">
-            <img src="assets/titulo-habilidades.png" alt="" class="title-img title-img-red habilidades-titulo-img" aria-hidden="true">
-            <img src="assets/titulo-habilidades.png" alt="" class="title-img title-img-blue habilidades-titulo-img" aria-hidden="true">
+            <img src="assets/images/titulo-habilidades.png" alt="Habilidades" class="title-img title-img-base habilidades-titulo-img">
+            <img src="assets/images/titulo-habilidades.png" alt="" class="title-img title-img-red habilidades-titulo-img" aria-hidden="true">
+            <img src="assets/images/titulo-habilidades.png" alt="" class="title-img title-img-blue habilidades-titulo-img" aria-hidden="true">
         </div>
 
         <ul class="habilidades-lista" id="habilidades-lista">
@@ -183,7 +215,7 @@
                     </div>
                 </div>
                 <div class="skill-label-col">
-                    <img src="assets/icon-html.png" alt="HTML5" class="skill-icon">
+                    <img src="assets/icons/icon-html.png" alt="HTML5" class="skill-icon">
                     <span class="skill-nome">HTML</span>
                 </div>
             </li>
@@ -196,7 +228,7 @@
                     </div>
                 </div>
                 <div class="skill-label-col">
-                    <img src="assets/icon-css.png" alt="CSS3" class="skill-icon">
+                    <img src="assets/icons/icon-css.png" alt="CSS3" class="skill-icon">
                     <span class="skill-nome">CSS</span>
                 </div>
             </li>
@@ -209,7 +241,7 @@
                     </div>
                 </div>
                 <div class="skill-label-col">
-                    <img src="assets/icon-js.png" alt="JavaScript" class="skill-icon">
+                    <img src="assets/icons/icon-js.png" alt="JavaScript" class="skill-icon">
                     <span class="skill-nome">JavaScript</span>
                 </div>
             </li>
@@ -222,7 +254,7 @@
                     </div>
                 </div>
                 <div class="skill-label-col">
-                    <img src="assets/icon-figma.png" alt="Figma" class="skill-icon">
+                    <img src="assets/icons/icon-figma.png" alt="Figma" class="skill-icon">
                     <span class="skill-nome">Figma</span>
                 </div>
             </li>
@@ -235,7 +267,7 @@
                     </div>
                 </div>
                 <div class="skill-label-col">
-                    <img src="assets/icon-uiux.png" alt="UI/UX Design" class="skill-icon">
+                    <img src="assets/icons/icon-uiux.png" alt="UI/UX Design" class="skill-icon">
                     <span class="skill-nome">UI/UX Design</span>
                 </div>
             </li>
@@ -247,9 +279,9 @@
 
         <div class="contato-left">
             <div class="contato-titulo-wrap title-glitch">
-                <img src="assets/contato-titulo.png" alt="Vamos Criar Algo Juntos?" class="title-img title-img-base contato-titulo-img">
-                <img src="assets/contato-titulo.png" alt="" class="title-img title-img-red contato-titulo-img" aria-hidden="true">
-                <img src="assets/contato-titulo.png" alt="" class="title-img title-img-blue contato-titulo-img" aria-hidden="true">
+                <img src="assets/images/contato-titulo.png" alt="Vamos Criar Algo Juntos?" class="title-img title-img-base contato-titulo-img">
+                <img src="assets/images/contato-titulo.png" alt="" class="title-img title-img-red contato-titulo-img" aria-hidden="true">
+                <img src="assets/images/contato-titulo.png" alt="" class="title-img title-img-blue contato-titulo-img" aria-hidden="true">
             </div>
         </div>
 
@@ -292,9 +324,10 @@
     </section>
 
     <audio id="bg-music" loop preload="auto">
-        <source src="assets/music.mp3" type="audio/mpeg">
+        <source src="assets/music/music.mp3" type="audio/mpeg">
     </audio>
 
     <script src="script.js"></script>
 </body>
 </html>
+

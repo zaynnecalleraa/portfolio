@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --pink-primary: #DD006F;
     --pink-light: #FF1B8D;
     --pink-glow: #FF4FB8;
@@ -168,7 +168,7 @@ a, button, .btn, .nav-link {
     align-items: flex-start;
     position: relative;
     overflow: hidden;
-    background-image: url('assets/hero-background.png');
+    background-image: url('assets/backgrounds/hero-background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -213,7 +213,7 @@ a, button, .btn, .nav-link {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('assets/gradiente-hero.png') center / cover no-repeat;
+    background: url('assets/backgrounds/gradiente-hero.png') center / cover no-repeat;
     mix-blend-mode: multiply;
     z-index: 0;
     pointer-events: none;
@@ -239,7 +239,7 @@ a, button, .btn, .nav-link {
     justify-content: flex-start;
 }
 
-/* efeito glitch nos títulos — três camadas PNG sobrepostas */
+/* efeito glitch nos tÃ­tulos â€” trÃªs camadas PNG sobrepostas */
 .title-glitch {
     position: relative;
     display: inline-block;
@@ -337,7 +337,7 @@ a, button, .btn, .nav-link {
     line-height: 1.4;
 }
 
-/* botões */
+/* botÃµes */
 .hero-buttons {
     display: flex;
     gap: 24px;
@@ -424,7 +424,7 @@ a, button, .btn, .nav-link {
     align-items: center;
     justify-content: flex-start;
     background: var(--black-bg);
-    background-image: url('assets/projetos-bg.png');
+    background-image: url('assets/backgrounds/projetos-bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -481,30 +481,87 @@ a, button, .btn, .nav-link {
     pointer-events: none;
 }
 
-.projetos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+.projetos-slider {
+    position: relative;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: start;
-    justify-items: center;
+    display: flex;
+    align-items: center;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(calc(-50% - 25px));
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 2px solid var(--pink-primary);
+    background: rgba(29, 0, 22, 0.85);
+    color: var(--pink-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: none;
+    z-index: 10;
+    transition: background 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(6px);
+}
+
+.slider-arrow svg {
+    width: 20px;
+    height: 20px;
+}
+
+.slider-arrow--prev { left: 0; }
+.slider-arrow--next { right: 0; }
+
+.slider-arrow.visivel {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.slider-arrow:hover {
+    background: var(--pink-primary);
+    color: var(--black-base);
+    box-shadow: 0 0 22px var(--pink-light);
+    transform: translateY(calc(-50% - 25px)) scale(1.12);
+}
+
+.projetos-grid {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 28px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 10px 24px 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.projetos-grid::-webkit-scrollbar {
+    display: none;
 }
 
 .projeto-card {
     position: relative;
     display: flex;
     justify-content: center;
-    width: 100%;
-    max-width: 360px;
+    flex: 0 0 320px;
     padding-bottom: 50px;
     animation: card-fade-in 0.8s ease backwards;
+    scroll-snap-align: start;
 }
 
 .projeto-card:nth-child(1) { animation-delay: 0.1s; }
 .projeto-card:nth-child(2) { animation-delay: 0.3s; }
 .projeto-card:nth-child(3) { animation-delay: 0.5s; }
+.projeto-card:nth-child(4) { animation-delay: 0.7s; }
 
 @keyframes card-fade-in {
     from { opacity: 0; transform: translateY(30px); }
@@ -554,6 +611,33 @@ a, button, .btn, .nav-link {
 
 .btn-projeto:active {
     transform: translateX(-50%) translateY(0);
+}
+
+.overlay-acoes {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-overlay {
+    flex: 1;
+    max-width: 150px;
+    font-size: 16px;
+    padding: 10px 6px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    position: static;
+    transform: none;
+    white-space: nowrap;
+}
+
+.btn-overlay.btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+.btn-overlay.btn-secondary:hover {
+    transform: translateY(-3px);
 }
 
 .projeto-confidencial {
@@ -617,7 +701,7 @@ a, button, .btn, .nav-link {
     min-height: 100vh;
     padding: 120px 80px 80px;
     background: var(--black-bg);
-    background-image: url('assets/sobre-bg.png');
+    background-image: url('assets/backgrounds/sobre-bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -641,21 +725,6 @@ a, button, .btn, .nav-link {
     z-index: 0;
 }
 
-.sobre::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: -80px;
-    width: 520px;
-    height: 460px;
-    background: radial-gradient(ellipse at 40% 70%,
-        rgba(27, 111, 255, 0.22) 0%,
-        rgba(100, 50, 200, 0.18) 40%,
-        transparent 70%);
-    border-radius: 50% 50% 30% 70% / 60% 40% 60% 40%;
-    pointer-events: none;
-    z-index: 0;
-}
 
 .sobre-inner {
     display: flex;
@@ -772,7 +841,7 @@ a, button, .btn, .nav-link {
     min-height: 100vh;
     padding: 120px 80px 100px;
     background: var(--black-bg);
-    background-image: url('assets/habilidades-bg.png');
+    background-image: url('assets/backgrounds/habilidades-bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -887,7 +956,7 @@ a, button, .btn, .nav-link {
     min-height: 100vh;
     padding: 60px 60px 60px 80px;
     background: var(--black-bg);
-    background-image: url('assets/contato-bg.png');
+    background-image: url('assets/backgrounds/contato-bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1174,3 +1243,4 @@ a, button, .btn, .nav-link {
     .card-paper { padding: 32px 24px 24px; }
     .contato-titulo-img { max-width: 320px; }
 }
+

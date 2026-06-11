@@ -181,21 +181,51 @@ if (habSection) {
 }
 
 
-// overlay do projeto confidencial
-const triggerBtn          = document.querySelector('.btn-confidencial-trigger');
-const overlayConfidencial = document.getElementById('overlay-safehaven');
+// slider de projetos
+const projetosGrid = document.querySelector('.projetos-grid');
+const prevArrow    = document.querySelector('.slider-arrow--prev');
+const nextArrow    = document.querySelector('.slider-arrow--next');
 
-if (triggerBtn && overlayConfidencial) {
-    triggerBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        overlayConfidencial.classList.toggle('ativo');
+if (projetosGrid && prevArrow && nextArrow) {
+    const cardStep = () => {
+        const card = projetosGrid.querySelector('.projeto-card');
+        return card ? card.offsetWidth + 28 : 348;
+    };
+
+    const atualizarSetas = () => {
+        const scrolled = projetosGrid.scrollLeft;
+        const maxScroll = projetosGrid.scrollWidth - projetosGrid.clientWidth;
+        prevArrow.classList.toggle('visivel', scrolled > 4);
+        nextArrow.classList.toggle('visivel', scrolled < maxScroll - 4);
+    };
+
+    prevArrow.addEventListener('click', () => {
+        projetosGrid.scrollBy({ left: -cardStep(), behavior: 'smooth' });
     });
 
-    overlayConfidencial.querySelector('.btn-confidencial-contato')
-        ?.addEventListener('click', () => {
-            overlayConfidencial.classList.remove('ativo');
-        });
+    nextArrow.addEventListener('click', () => {
+        projetosGrid.scrollBy({ left: cardStep(), behavior: 'smooth' });
+    });
+
+    projetosGrid.addEventListener('scroll', atualizarSetas);
+    atualizarSetas();
 }
+
+
+// overlay dos projetos sem repositório
+document.querySelectorAll('.btn-overlay-trigger').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const overlay = trigger.closest('.projeto-card').querySelector('.projeto-confidencial');
+        overlay.classList.toggle('ativo');
+    });
+});
+
+document.querySelectorAll('.btn-overlay-contato').forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.closest('.projeto-confidencial').classList.remove('ativo');
+    });
+});
 
 
 // formulário de contato
