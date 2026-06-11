@@ -239,7 +239,7 @@ a, button, .btn, .nav-link {
     justify-content: flex-start;
 }
 
-/* efeito glitch nos tÃ­tulos â€” trÃªs camadas PNG sobrepostas */
+/* efeito glitch nos títulos — três camadas PNG sobrepostas */
 .title-glitch {
     position: relative;
     display: inline-block;
@@ -337,7 +337,7 @@ a, button, .btn, .nav-link {
     line-height: 1.4;
 }
 
-/* botÃµes */
+/* botões */
 .hero-buttons {
     display: flex;
     gap: 24px;
